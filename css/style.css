@@ -4,7 +4,8 @@
   --very-pale-blue: hsl(225, 100%, 98%);
   --desaturated-blue: hsl(224, 23%, 55%);
   --dark-blue: hsl(223, 47%, 23%);
-  --card-blue: #f6f7fe;
+  --card-blue: hsl(233, 80%, 98%);
+  --hover-blue: hsl(243, 85%, 68%);
 }
 
 * {
@@ -24,6 +25,16 @@ body {
   align-items: center;
   position: relative;
   height: 98vh;
+}
+
+.background {
+  background: url('../images/pattern-background-mobile.svg');
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  top: -59px;
 }
 
 .hero {
@@ -54,7 +65,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  background-color: white;
+  background-color: var(--very-pale-blue);
   align-items: center;
   padding: 30px 10px;
 }
@@ -97,6 +108,7 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-right: 20px;
 }
 
 .plan__description {
@@ -114,6 +126,14 @@ img {
   font-size: 11px;
   font-weight: 700;
   color: var(--bright-blue);
+  cursor: pointer;
+}
+
+.card__option:hover {
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--hover-blue);
 }
 
 .btn {
@@ -123,15 +143,18 @@ img {
   border-radius: 10px;
   font-size: 10px;
   font-weight: 900;
+  cursor: pointer;
 }
 
 .btn-primary {
   background: var(--bright-blue);
   color: white;
-  /* box-shadow: var(--bright-blue) 10px 0px 5px; */
-
   box-shadow: rgba(49, 66, 161, 0.3) 0px 19px 38px,
     rgba(71, 77, 170, 0.22) 0px 10px 12px;
+}
+
+.btn.btn-primary:hover {
+  background: var(--hover-blue);
 }
 
 .btn-secondary {
@@ -148,4 +171,16 @@ img {
   text-align: center;
   width: 100%;
   height: 2vh;
+}
+
+@media screen and (min-width: 375px) {
+  .background {
+    background: url('../images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    top: -59px;
+  }
 }
