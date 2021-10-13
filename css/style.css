@@ -1,0 +1,151 @@
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --card-blue: #f6f7fe;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  background-color: var(--pale-blue);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 98vh;
+}
+
+.hero {
+  max-width: 310px;
+
+  height: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 0 auto;
+  box-shadow: rgba(49, 66, 161, 0.151) 0px 19px 38px,
+    rgba(71, 78, 170, 0.075) 0px 10px 12px;
+}
+
+.hero__img {
+  width: 100%;
+  height: 170px;
+  background: url('../images/illustration-hero.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+img {
+  width: 100%;
+}
+
+.hero__body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: white;
+  align-items: center;
+  padding: 30px 10px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 900;
+  color: #333;
+}
+
+.info {
+  font-size: 14px;
+  text-align: center;
+  opacity: 0.6;
+  font-weight: 500;
+  color: var(--dark-blue);
+  padding: 10px 30px;
+  line-height: 22px;
+}
+
+.card {
+  background-color: var(--card-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 250px;
+  border-radius: 8px;
+  padding: 14px;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.card__icon {
+  height: 40px;
+  width: 40px;
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.plan__description {
+  font-weight: 900;
+  font-size: 11px;
+}
+
+.plan__price {
+  font-size: 11px;
+  opacity: 0.6;
+}
+
+.card__option {
+  text-decoration: underline;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--bright-blue);
+}
+
+.btn {
+  border: none;
+  padding: 12px 20px;
+  width: 86%;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.btn-primary {
+  background: var(--bright-blue);
+  color: white;
+  /* box-shadow: var(--bright-blue) 10px 0px 5px; */
+
+  box-shadow: rgba(49, 66, 161, 0.3) 0px 19px 38px,
+    rgba(71, 77, 170, 0.22) 0px 10px 12px;
+}
+
+.btn-secondary {
+  background: transparent;
+  opacity: 0.6;
+
+  color: var(--dark-blue);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  font-size: 10px;
+  text-align: center;
+  width: 100%;
+  height: 2vh;
+}
