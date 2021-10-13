@@ -34,7 +34,6 @@ body {
   z-index: -1;
   height: 100%;
   width: 100%;
-  top: -59px;
 }
 
 .hero {
@@ -175,12 +174,58 @@ img {
 
 @media screen and (min-width: 375px) {
   .background {
-    background: url('../images/pattern-background-desktop.svg');
-    background-repeat: no-repeat;
+    display: none;
+  }
+
+  .custom-shape-divider {
     position: absolute;
-    z-index: -1;
-    height: 100%;
+    top: 0;
+    left: 0;
     width: 100%;
-    top: -59px;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    z-index: -1;
+  }
+
+  .custom-shape-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 226px;
+    transform: rotateY(180deg);
+  }
+
+  .custom-shape-divider .shape-fill {
+    fill: #d6e1ff;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .background {
+    display: none;
+  }
+
+  .custom-shape-divider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    z-index: -1;
+  }
+
+  .custom-shape-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 400px;
+    transform: rotateY(180deg);
+  }
+
+  .custom-shape-divider .shape-fill {
+    fill: #d6e1ff;
   }
 }
